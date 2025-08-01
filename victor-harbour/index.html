@@ -536,6 +536,322 @@
         height: 20px;
       }
     }
+
+    /* Print Styles for PDF Generation */
+    @media print {
+      /* Reset and base styles */
+      * {
+        -webkit-print-color-adjust: exact !important;
+        color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      body {
+        font-size: 12pt;
+        line-height: 1.4;
+        color: #000 !important;
+        background: #fff !important;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Hide interactive elements */
+      .cta-buttons,
+      #scroll-to-top,
+      .carousel,
+      script {
+        display: none !important;
+      }
+
+      /* Hero section adjustments */
+      .hero {
+        background: #006c8c !important;
+        color: #fff !important;
+        padding: 2rem 1rem !important;
+        page-break-inside: avoid;
+        margin-bottom: 1rem;
+      }
+
+      .hero::before {
+        display: none !important;
+      }
+
+      .hero h1 {
+        font-size: 24pt !important;
+        margin-bottom: 0.5rem !important;
+        text-shadow: none !important;
+      }
+
+      .hero p {
+        font-size: 14pt !important;
+        margin-bottom: 1rem !important;
+      }
+
+      /* Main content layout */
+      main {
+        padding: 0 !important;
+        max-width: none !important;
+        margin: 0 !important;
+      }
+
+      /* Section styling */
+      section {
+        background: #fff !important;
+        margin: 1rem 0 !important;
+        padding: 1rem !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        page-break-inside: avoid;
+      }
+
+      section:hover {
+        transform: none !important;
+        box-shadow: none !important;
+      }
+
+      /* Typography adjustments */
+      h1 {
+        font-size: 20pt !important;
+        color: #000 !important;
+        margin: 0 0 0.5rem 0 !important;
+        page-break-after: avoid;
+      }
+
+      h2 {
+        font-size: 16pt !important;
+        color: #006c8c !important;
+        margin: 0 0 0.75rem 0 !important;
+        page-break-after: avoid;
+        border-bottom: 2px solid #006c8c;
+        padding-bottom: 0.25rem;
+      }
+
+      h3 {
+        font-size: 14pt !important;
+        color: #000 !important;
+        margin: 0 0 0.5rem 0 !important;
+        page-break-after: avoid;
+      }
+
+      h5 {
+        font-size: 12pt !important;
+        color: #2c5530 !important;
+        margin: 0 0 0.25rem 0 !important;
+      }
+
+      p {
+        font-size: 11pt !important;
+        margin: 0 0 0.5rem 0 !important;
+        orphans: 3;
+        widows: 3;
+      }
+
+      /* Timeline styles */
+      ul.timeline {
+        position: relative;
+        padding-left: 2rem !important;
+      }
+
+      ul.timeline::before {
+        content: '';
+        position: absolute;
+        left: 0.5rem;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #006c8c !important;
+      }
+
+      ul.timeline li {
+        padding: 0.5rem 0 0.5rem 1.5rem !important;
+        font-size: 11pt !important;
+        position: relative;
+        page-break-inside: avoid;
+      }
+
+      ul.timeline li::before {
+        content: '';
+        position: absolute;
+        left: -0.25rem;
+        top: 0.75rem;
+        width: 0.75rem;
+        height: 0.75rem;
+        background: #ff6b35 !important;
+        border-radius: 50%;
+        border: 2px solid #fff;
+      }
+
+      .timeline-clickable {
+        cursor: default !important;
+        background: none !important;
+        transform: none !important;
+        box-shadow: none !important;
+      }
+
+      .timeline-clickable::after {
+        display: none !important;
+      }
+
+      .timeline-clickable:hover {
+        background: none !important;
+        transform: none !important;
+        box-shadow: none !important;
+      }
+
+      /* Highlights and lists */
+      .highlights ul {
+        padding-left: 1rem !important;
+      }
+
+      .highlights li {
+        margin: 0.25rem 0 !important;
+        padding: 0.25rem 0 !important;
+        border-bottom: 1px solid #eee !important;
+        font-size: 10pt !important;
+        page-break-inside: avoid;
+      }
+
+      .highlights li:before {
+        content: "✓" !important;
+        color: #2c5530 !important;
+        margin-right: 0.5rem !important;
+        font-size: 10pt !important;
+      }
+
+      .highlights li strong {
+        color: #ff6b35 !important;
+        font-weight: 600 !important;
+      }
+
+      /* Sub-location styling */
+      .sub-location {
+        margin: 0.75rem 0 !important;
+        padding: 0.75rem !important;
+        background: #f8f9fa !important;
+        border-radius: 4px !important;
+        border-left: 3px solid #2c5530 !important;
+        page-break-inside: avoid;
+      }
+
+      .sub-location h5 {
+        color: #2c5530 !important;
+      }
+
+      .sub-location p {
+        font-size: 10pt !important;
+        color: #555 !important;
+      }
+
+      .sub-location li {
+        font-size: 10pt !important;
+        color: #666 !important;
+        margin: 0.25rem 0 !important;
+      }
+
+      /* Map links */
+      .map-link {
+        text-align: center;
+        margin: 0.75rem 0 !important;
+        page-break-inside: avoid;
+      }
+
+      .map-link a {
+        color: #006c8c !important;
+        text-decoration: underline !important;
+        border: 1px solid #006c8c !important;
+        padding: 0.5rem 1rem !important;
+        border-radius: 4px !important;
+        display: inline-block !important;
+        font-size: 10pt !important;
+      }
+
+      .map-link a:hover {
+        background: none !important;
+        transform: none !important;
+        box-shadow: none !important;
+      }
+
+      /* Icons in print */
+      .icon,
+      .icon-small {
+        display: none !important;
+      }
+
+      /* Images */
+       img {
+         max-width: 100% !important;
+         height: auto !important;
+         page-break-inside: avoid;
+         border: 1px solid #ddd !important;
+         border-radius: 4px !important;
+       }
+
+       /* Trip overview map specific styling */
+       .trip-overview-map {
+         margin: 1rem 0 !important;
+         text-align: center !important;
+         page-break-inside: avoid;
+       }
+
+       .trip-overview-map h3 {
+         font-size: 14pt !important;
+         color: #006c8c !important;
+         margin: 0 0 0.75rem 0 !important;
+         text-align: center !important;
+       }
+
+       .trip-overview-map img {
+         width: auto !important;
+         height: 400px !important;
+         margin: 0.5rem auto !important;
+         display: block !important;
+         border: 2px solid #006c8c !important;
+         border-radius: 8px !important;
+         box-shadow: none !important;
+       }
+
+      /* Page breaks */
+      .hero {
+        page-break-after: auto;
+      }
+
+      section {
+        page-break-before: auto;
+        page-break-after: auto;
+      }
+
+      h2 {
+        page-break-before: auto;
+      }
+
+      /* Ensure proper spacing */
+      @page {
+        margin: 1in;
+        size: A4;
+      }
+
+      /* Remove hover effects and transitions */
+      * {
+        transition: none !important;
+        animation: none !important;
+      }
+
+      /* URL display for links */
+      a[href^="http"]:after {
+        content: " (" attr(href) ")";
+        font-size: 9pt;
+        color: #666;
+      }
+
+      /* Ensure text is selectable and readable */
+      body {
+        -webkit-user-select: text !important;
+        -moz-user-select: text !important;
+        -ms-user-select: text !important;
+        user-select: text !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -592,6 +908,11 @@
             查看完整路线地图
           </a>
         </div>
+        
+        <div class="trip-overview-map">
+          <h3>行程总览地图</h3>
+          <img src="assets/map.png" alt="阿德莱德周六自驾游完整路线图 - 从Ashford出发经诺朗加港、麦克拉伦谷到维克多港的详细路线" style="width: 100%; height: auto; max-width: 400px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 1rem auto; display: block; border: 1px solid #ddd;" />
+        </div>
     </section>
 
     <section id="port-noarlunga">
@@ -616,6 +937,10 @@
         <li><strong>A E Young Reserve / Jubilee Park 探险公园：</strong>家庭友好的公园，设有儿童游乐设施和开阔的草地区域，适合孩子们游玩和家庭野餐。</li>
         <li><strong>Onkaparinga River Mouth View Point 入海口观景台：</strong>位于Onkaparinga河出海口的观景平台，可以看到河流与圣文森特湾交汇的壮丽自然景观。河口生态美景、流沙与沙丘地形，安静不拥挤，适合静心漫步。</li>
       </ul>
+      
+      <div class="sub-location">
+        <img src="assets/image4.png" alt="诺朗加港" style="width: 100%; height: auto; max-width: 800px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 1rem auto; display: block;" />
+      </div>
     </section>
 
     <section id="mclaren-vale">
@@ -639,6 +964,10 @@
         <li><strong>The d'Arenberg Cube 魔方酒庄：</strong>五层楼高的"魔方"造型建筑是McLaren Vale的地标。创意建筑 + 互动式酒庄体验，顶楼酒窖品酒区观景极佳，艺术与葡萄酒的结合。游览时间：11:15-11:45。</li>
         <li><strong>Down The Rabbit Hole Wines 兔子洞酒庄：</strong>风格独特的精品酒庄，用复古巴士作为品酒空间。复古巴士酒吧体验，草坪野餐风格，配有坐垫与懒人沙发，小众但极具风格的酒款（玫瑰酒、设拉子）。游览时间：12:00-13:00。</li>
       </ul>
+      
+      <div class="sub-location">
+        <img src="assets/image6.png" alt="麦克拉伦谷" style="width: 100%; height: auto; max-width: 800px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 1rem auto; display: block;" />
+      </div>
     </section>
 
 
