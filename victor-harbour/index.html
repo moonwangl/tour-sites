@@ -167,7 +167,7 @@
 
     /* Main Content */
     main {
-      padding: 2rem 1rem;
+      padding: 0rem 1rem;
       max-width: 1000px;
       margin: auto;
     }
@@ -423,8 +423,8 @@
 
     /* Carousel Improvements */
     .carousel {
-      margin: 2rem auto;
-      max-width: 900px;
+      margin: 1rem auto;
+      max-width: 960px;
       border-radius: 16px;
       overflow: hidden;
       box-shadow: var(--shadow);
@@ -489,6 +489,53 @@
         height: 250px;
       }
     }
+
+    /* Scroll to Top Button */
+    #scroll-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: var(--primary-blue);
+      color: var(--white);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+      z-index: 1000;
+      font-size: 0;
+    }
+
+    #scroll-to-top:hover {
+      background: var(--secondary-blue);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    #scroll-to-top svg {
+      width: 24px;
+      height: 24px;
+      color: var(--white);
+    }
+
+    @media (max-width: 768px) {
+      #scroll-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+      }
+
+      #scroll-to-top svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -532,7 +579,7 @@
       <ul class="timeline">
         <li>8:15 出发（Ashford）</li>
         <li class="timeline-clickable" data-target="port-noarlunga">8:45 抵达 <strong>诺朗加港</strong>（早餐、栈桥、探险公园、入海口）</li>
-        <li class="timeline-clickable" data-target="mclaren-vale">10:00 离开，10:15 抵达 <strong>麦克拉伦谷</strong>（麦克斯韦尔酒庄迷宫、魔方酒庄、兔子洞酒庄）</li>
+        <li class="timeline-clickable" data-target="mclaren-vale">9:45 离开，10:00 抵达 <strong>麦克拉伦谷</strong>（麦克斯韦尔酒庄迷宫、魔方酒庄、兔子洞酒庄）</li>
         <li class="timeline-clickable" data-target="victor-harbor">13:00 离开，13:30 抵达 <strong>维克多港</strong>（午餐、观鲸、搭马拉火车、游花岗岩岛）</li>
         <li>17:00 开车返回</li>
         <li>18:00 抵达阿德莱德</li>
@@ -588,8 +635,8 @@
         </a>
       </div>
       <ul class="highlights">
-        <li><strong>Maxwell Wines 麦克斯韦尔酒庄迷宫：</strong>南澳唯一的迷宫式酒庄景点，拥有独特的树墙迷宫。树墙迷宫（适合拍照与探险），高品质蜂蜜酒与红酒，餐厅提供精致葡萄酒配餐。游览时间：10:15-11:30。</li>
-        <li><strong>The d'Arenberg Cube 魔方酒庄：</strong>五层楼高的"魔方"造型建筑是McLaren Vale的地标。创意建筑 + 互动式酒庄体验，顶楼酒窖品酒区观景极佳，艺术与葡萄酒的结合。游览时间：11:30-12:00。</li>
+        <li><strong>Maxwell Wines 麦克斯韦尔酒庄迷宫：</strong>南澳唯一的迷宫式酒庄景点，拥有独特的树墙迷宫。树墙迷宫（适合拍照与探险），高品质蜂蜜酒与红酒，餐厅提供精致葡萄酒配餐。游览时间：10:00-11:00。</li>
+        <li><strong>The d'Arenberg Cube 魔方酒庄：</strong>五层楼高的"魔方"造型建筑是McLaren Vale的地标。创意建筑 + 互动式酒庄体验，顶楼酒窖品酒区观景极佳，艺术与葡萄酒的结合。游览时间：11:15-11:45。</li>
         <li><strong>Down The Rabbit Hole Wines 兔子洞酒庄：</strong>风格独特的精品酒庄，用复古巴士作为品酒空间。复古巴士酒吧体验，草坪野餐风格，配有坐垫与懒人沙发，小众但极具风格的酒款（玫瑰酒、设拉子）。游览时间：12:00-13:00。</li>
       </ul>
     </section>
@@ -697,7 +744,30 @@
         $('img').on('load', function() {
           $(this).addClass('loaded');
         });
+
+        // Scroll to top functionality
+        $(window).scroll(function() {
+          if ($(this).scrollTop() > 300) {
+            $('#scroll-to-top').fadeIn();
+          } else {
+            $('#scroll-to-top').fadeOut();
+          }
+        });
+
+        $('#scroll-to-top').click(function() {
+          $('html, body').animate({
+            scrollTop: 0
+          }, 800, 'easeInOutQuart');
+          return false;
+        });
       });
     </script>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" title="回到顶部">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 14L12 9L17 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
   </body>
 </html>

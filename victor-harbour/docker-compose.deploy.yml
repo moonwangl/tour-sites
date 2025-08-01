@@ -1,0 +1,62 @@
+version: '3.8'
+
+services:
+  # Deploy to S3 using AWS CLI
+  deploy-s3:
+    image: amazon/aws-cli:latest
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_DEFAULT_REGION=${AWS_REGION:-us-east-1}
+    command: >
+      sh -c "echo 'Deploying to S3 bucket: ${AWS_S3_BUCKET}' &&
+             aws s3 sync . s3://${AWS_S3_BUCKET} 
+             --delete 
+             --exclude '.git/*' 
+             --exclude '.github/*' 
+             --exclude '*.md' 
+             --exclude 'docker-compose*' 
+             --exclude '.env*' &&
+             echo 'Deployment completed successfully!'"
+    profiles:
+      - deploy
+
+  # Invalidate CloudFront cache (optional)
+  invalidate-cloudfront:
+    image: amazon/aws-cli:latest
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_DEFAULT_REGION=${AWS_REGION:-us-east-1}
+    command: >
+      sh -c "if [ -n '${AWS_CLOUDFRONT_DISTRIBUTION_ID}' ]; then
+               echo 'Invalidating CloudFront distribution: ${AWS_CLOUDFRONT_DISTRIBUTION_ID}' &&
+               aws cloudfront create-invalidation 
+               --distribution-id ${AWS_CLOUDFRONT_DISTRIBUTION_ID} 
+               --paths '/*' &&
+               echo 'CloudFront invalidation completed!';
+             else
+               echo 'No CloudFront distribution ID provided, skipping invalidation';
+             fi"
+    profiles:
+      - deploy
+      - cloudfront
+
+  # Test AWS credentials and S3 access
+  test-aws:
+    image: amazon/aws-cli:latest
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_DEFAULT_REGION=${AWS_REGION:-us-east-1}
+    command: >
+      sh -c "echo 'Testing AWS credentials...' &&
+             aws sts get-caller-identity &&
+             echo 'Testing S3 bucket access...' &&
+             aws s3 ls s3://${AWS_S3_BUCKET} &&
+             echo 'AWS configuration test completed successfully!'"
+    profiles:
+      - test
