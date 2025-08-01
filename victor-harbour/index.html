@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>阿德莱德周六自驾游 | 南澳一日精品之旅</title>
+  <meta name="description" content="从Ashford出发，探索南澳四大景点：诺朗加港、麦克拉伦谷、草莓农场、维克多港观鲸。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+  <style>
+    :root {
+      --primary-blue: #006c8c;
+      --secondary-blue: #0088b3;
+      --accent-orange: #ff6b35;
+      --accent-green: #2ecc71;
+      --accent-gold: #f39c12;
+      --light-gray: #f8f9fa;
+      --medium-gray: #6c757d;
+      --dark-gray: #343a40;
+      --white: #ffffff;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+      background: var(--light-gray);
+      color: var(--dark-gray);
+      font-weight: 400;
+    }
+
+    /* Typography Hierarchy */
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 0 0 1rem 0;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--primary-blue);
+      margin: 0 0 1.5rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin: 0 0 1rem 0;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin: 0 0 1rem 0;
+      font-weight: 300;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+      color: var(--white);
+      padding: 4rem 1rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
+      opacity: 0.3;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      margin-bottom: 1.5rem;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 2.5rem;
+      opacity: 0.95;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-primary {
+      background: var(--accent-orange);
+      color: var(--white);
+    }
+
+    .btn-secondary {
+      background: var(--white);
+      color: var(--primary-blue);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .btn-primary:hover {
+      background: #e55a2b;
+    }
+
+    .btn-secondary:hover {
+      background: #f8f9fa;
+    }
+
+    /* SVG Icons */
+    .icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      fill: currentColor;
+    }
+
+    .icon-small {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+
+    /* Main Content */
+    main {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section {
+      background: var(--white);
+      margin: 2rem 0;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    section:hover {
+       transform: translateY(-4px);
+       box-shadow: var(--shadow-hover);
+     }
+
+    /* Timeline Styles */
+    ul.timeline {
+      list-style: none;
+      padding: 0;
+      position: relative;
+    }
+
+    ul.timeline::before {
+      content: '';
+      position: absolute;
+      left: 1rem;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, var(--accent-orange), var(--accent-green));
+      border-radius: 2px;
+    }
+
+    ul.timeline li {
+      padding: 1rem 0 1rem 3rem;
+      position: relative;
+      font-size: 1.1rem;
+    }
+
+    ul.timeline li::before {
+      content: '';
+      position: absolute;
+      left: 0.25rem;
+      top: 1.5rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      background: var(--accent-orange);
+      border-radius: 50%;
+      border: 3px solid var(--white);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    ul.timeline li strong {
+      color: var(--primary-blue);
+      font-weight: 600;
+    }
+
+    /* Clickable Timeline Items */
+    .timeline-clickable {
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 8px;
+      margin: 0.5rem 0;
+      padding: 0.75rem 1rem 0.75rem 2rem;
+      position: relative;
+    }
+
+    .timeline-clickable::after {
+      content: '→';
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--medium-gray);
+      font-size: 1.2rem;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    .timeline-clickable:hover {
+      background: rgba(0, 108, 140, 0.05);
+      transform: translateX(5px);
+      box-shadow: 0 2px 8px rgba(0, 108, 140, 0.1);
+    }
+
+    .timeline-clickable:hover strong {
+      color: var(--accent-orange);
+    }
+
+    .timeline-clickable:hover::after {
+      opacity: 1;
+      color: var(--accent-orange);
+      transform: translateY(-50%) translateX(3px);
+    }
+
+    .timeline-clickable:active {
+      transform: translateX(3px);
+    }
+
+    /* Section Highlight Effect */
+    .section-highlight {
+      animation: sectionPulse 2s ease-in-out;
+      border: 2px solid var(--accent-orange) !important;
+    }
+
+    @keyframes sectionPulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.4);
+      }
+      50% {
+        box-shadow: 0 0 0 20px rgba(255, 107, 53, 0.1);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 53, 0);
+      }
+    }
+
+    /* Highlights */
+    .highlights {
+      margin-top: 1rem;
+    }
+
+    .highlights ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .highlights li {
+      margin: 0.75rem 0;
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: flex-start;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .highlights li:before {
+      content: "✓";
+      color: #2c5530;
+      font-weight: bold;
+      margin-right: 10px;
+      font-size: 14px;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .highlights li strong {
+      color: var(--accent-orange);
+      font-weight: 600;
+    }
+
+    .sub-location {
+      margin: 15px 0;
+      padding: 15px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      border-left: 4px solid #2c5530;
+    }
+
+    .sub-location h5 {
+      color: #2c5530;
+      margin: 0 0 8px 0;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .sub-location p {
+      margin: 8px 0;
+      color: #555;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .sub-location ul {
+      margin: 10px 0 0 0;
+      padding-left: 20px;
+    }
+
+    .sub-location li {
+      margin: 5px 0;
+      padding: 0;
+      border: none;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .sub-location li:before {
+            content: "•";
+            color: #2c5530;
+            margin-right: 8px;
+            margin-top: 0;
+        }
+        
+        .whale-map {
+            margin: 15px 0;
+            text-align: center;
+        }
+        
+        .whale-map svg {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+        }
+        
+        @media (max-width: 768px) {
+            .whale-map svg {
+                max-width: 100%;
+            }
+            
+            .whale-map svg text {
+                font-size: 10px;
+            }
+        }
+
+    /* Map Links */
+    .map-link {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .map-link a {
+      color: var(--primary-blue);
+      font-weight: 600;
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid var(--primary-blue);
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .map-link a:hover {
+      background: var(--primary-blue);
+      color: var(--white);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .map-link svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    /* Carousel Improvements */
+    .carousel {
+      margin: 2rem auto;
+      max-width: 900px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .carousel img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .carousel img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Lazy Loading */
+    .carousel img[data-lazy] {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .carousel img.slick-active {
+      opacity: 1;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 3rem 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+      }
+
+      section {
+        padding: 1.5rem;
+        margin: 1rem 0;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .carousel img {
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>阿德莱德周六自驾游计划</h1>
+      <p>从Ashford出发，体验最美海岸线，品尝知名葡萄酒，手选草莓，观赏南露脊鲸</p>
+      <div class="cta-buttons">
+        <a href="#itinerary" class="btn btn-primary">
+          <svg class="icon-small" viewBox="0 0 24 24">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+          查看行程详情
+        </a>
+      </div>
+    </div>
+  </section>
+  <main>
+      <div class="carousel">
+        <div><img data-lazy="assets/image4.png" alt="诺朗加港海滩风光 - 南澳大利亚最美海岸线之一，享受阳光沙滩和海洋探险" loading="lazy"></div>
+        <div><img data-lazy="assets/image6.png" alt="麦克拉伦谷葡萄酒庄 - 世界知名葡萄酒产区，品尝优质红酒和体验酒庄文化" loading="lazy"></div>
+        <div><img data-lazy="assets/image1.png" alt="维克多港观鲸之旅 - 近距离观赏南露脊鲸，体验难忘的海洋生态之旅" loading="lazy"></div>
+        <div><img data-lazy="assets/1.jpg" alt="维克多港风光" loading="lazy"></div>
+        <div><img data-lazy="assets/2.jpg" alt="麦克拉伦谷酒庄景色" loading="lazy"></div>
+        <div><img data-lazy="assets/3.png" alt="诺朗加港海岸线" loading="lazy"></div>
+        <div><img data-lazy="assets/4.png" alt="南澳海滨风光" loading="lazy"></div>
+        <div><img data-lazy="assets/5.jpeg" alt="弗勒里厄半岛自然景观" loading="lazy"></div>
+        <div><img data-lazy="assets/6.jpeg" alt="维克多港观鲸体验" loading="lazy"></div>
+        <div><img data-lazy="assets/7.png" alt="麦克拉伦谷葡萄园" loading="lazy"></div>
+        <div><img data-lazy="assets/8.jpg" alt="南澳海岸探险" loading="lazy"></div>
+      </div>
+
+    <section id="itinerary">
+        <h2>
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+          行程路线
+        </h2>
+      <ul class="timeline">
+        <li>8:15 出发（Ashford）</li>
+        <li class="timeline-clickable" data-target="port-noarlunga">8:45 抵达 <strong>诺朗加港</strong>（早餐、栈桥、探险公园、入海口）</li>
+        <li class="timeline-clickable" data-target="mclaren-vale">10:00 离开，10:15 抵达 <strong>麦克拉伦谷</strong>（麦克斯韦尔酒庄迷宫、魔方酒庄、兔子洞酒庄）</li>
+        <li class="timeline-clickable" data-target="victor-harbor">13:00 离开，13:30 抵达 <strong>维克多港</strong>（午餐、观鲸、搭马拉火车、游花岗岩岛）</li>
+        <li>17:00 开车返回</li>
+        <li>18:00 抵达阿德莱德</li>
+      </ul>
+      <div class="map-link">
+          <a href="https://maps.app.goo.gl/pMHkUvvXGtQPYiQL9" target="_blank">
+            <svg class="icon-small" viewBox="0 0 24 24">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            查看完整路线地图
+          </a>
+        </div>
+    </section>
+
+    <section id="port-noarlunga">
+        <h2>
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+          </svg>
+          诺朗加港亮点
+        </h2>
+      <p>风景如画的海滨小镇，离阿德莱德市区仅40分钟车程，适合家庭、情侣或喜爱大自然的游客短途探索。</p>
+      <div class="map-link">
+        <a href="https://maps.app.goo.gl/r6mcyLYyBsUDvx599" target="_blank">
+          <svg class="icon-small" viewBox="0 0 24 24">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+          查看诺朗加港地图
+        </a>
+      </div>
+      <ul class="highlights">
+        <li><strong>Agatha's 早餐：</strong>当地知名的早餐餐厅，提供新鲜美味的早餐选择，是开始一天行程的完美地点。</li>
+        <li><strong>Port Noarlunga Boardwalk 栈桥：</strong>历史悠久的木制栈桥，延伸至海中，是钓鱼、散步和观赏海景的绝佳地点。栈桥周围海水清澈，适合浮潜和游泳。</li>
+        <li><strong>A E Young Reserve / Jubilee Park 探险公园：</strong>家庭友好的公园，设有儿童游乐设施和开阔的草地区域，适合孩子们游玩和家庭野餐。</li>
+        <li><strong>Onkaparinga River Mouth View Point 入海口观景台：</strong>位于Onkaparinga河出海口的观景平台，可以看到河流与圣文森特湾交汇的壮丽自然景观。河口生态美景、流沙与沙丘地形，安静不拥挤，适合静心漫步。</li>
+      </ul>
+    </section>
+
+    <section id="mclaren-vale">
+        <h2>
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M6 3l0 6c0 2.97 2.16 5.43 5 5.91V19H9v2h6v-2h-2v-4.09c2.84-.48 5-2.94 5-5.91l0-6H6zm2 2h8v4c0 2.21-1.79 4-4 4s-4-1.79-4-4V5z"/>
+          </svg>
+          麦克拉伦谷亮点
+        </h2>
+      <p>世界著名的葡萄酒产区，以设拉子（Shiraz）为代表，同时融合艺术、建筑与自然风景。</p>
+      <div class="map-link">
+        <a href="https://maps.app.goo.gl/VWstiZgcDYEkrzCM9" target="_blank">
+          <svg class="icon-small" viewBox="0 0 24 24">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+          查看麦克拉伦谷地图
+        </a>
+      </div>
+      <ul class="highlights">
+        <li><strong>Maxwell Wines 麦克斯韦尔酒庄迷宫：</strong>南澳唯一的迷宫式酒庄景点，拥有独特的树墙迷宫。树墙迷宫（适合拍照与探险），高品质蜂蜜酒与红酒，餐厅提供精致葡萄酒配餐。游览时间：10:15-11:30。</li>
+        <li><strong>The d'Arenberg Cube 魔方酒庄：</strong>五层楼高的"魔方"造型建筑是McLaren Vale的地标。创意建筑 + 互动式酒庄体验，顶楼酒窖品酒区观景极佳，艺术与葡萄酒的结合。游览时间：11:30-12:00。</li>
+        <li><strong>Down The Rabbit Hole Wines 兔子洞酒庄：</strong>风格独特的精品酒庄，用复古巴士作为品酒空间。复古巴士酒吧体验，草坪野餐风格，配有坐垫与懒人沙发，小众但极具风格的酒款（玫瑰酒、设拉子）。游览时间：12:00-13:00。</li>
+      </ul>
+    </section>
+
+
+
+    <section id="victor-harbor">
+        <h2>
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M4.5 12.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5S6.83 11 6 11s-1.5.67-1.5 1.5zM9 16c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5S9 15.17 9 16zm3-9c-4.97 0-9 4.03-9 9 0 .83.67 1.5 1.5 1.5S6 16.83 6 16c0-3.31 2.69-6 6-6s6 2.69 6 6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5c0-4.97-4.03-9-9-9z"/>
+          </svg>
+          维克多港观鲸之旅
+        </h2>
+      <p>南澳著名的海滨度假胜地，在冬季可以观赏从南极迁徙而来的南露脊鲸和座头鲸。</p>
+      <div class="map-link">
+        <a href="https://maps.app.goo.gl/seAj7vgrm3tvCYC7A" target="_blank">
+          <svg class="icon-small" viewBox="0 0 24 24">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+          查看维克多港地图
+        </a>
+      </div>
+      <ul class="highlights">
+        <li><strong>海边午餐：</strong>在港口附近海边享用午餐。</li>
+        <li><strong>观鲸之旅（14:00登船）：</strong>持牌观鲸船，能够进入恩康特湾（Encounter Bay）南露脊鲸繁殖保护区，从海平面近距离欣赏这些雄伟壮丽的生物。</li>
+        <li><strong>海豹岩（Seal Rocks）：</strong>观鲸途中会经过的重要景点，可以观赏海豹栖息地和壮丽的海岸风光。</li>
+        <li><strong>怀特岛（Wright Island）：</strong>观鲸路线中的重要地标，周围海域是鲸鱼活动的热点区域。</li>
+        <li><strong>西岛（West Island）：</strong>观鲸船会经过的另一个重要观测点，提供绝佳的鲸鱼观赏机会。</li>
+        <li><strong>马拉火车（Victor Harbor Horse Drawn Tramway）：</strong>世界上仅存的马拉有轨电车之一，连接维克多港主岸与花岗岩岛，是独特的历史体验。</li>
+        <li><strong>花岗岩岛石堤（Granite Island Stone Jetty）：</strong>通过栈桥连接的小岛，可以步行或乘坐马拉火车前往，岛上有步道、咖啡厅和观景点。</li>
+        <li><strong>维克多港观景台：</strong>俯瞰整个维克多港和恩康特湾的最佳位置，是拍照留念的理想地点。</li>
+      </ul>
+      
+      <div class="sub-location">
+        <h5>观鲸路线图</h5>
+        <img src="assets/image5.png" alt="观鲸路线图" style="width: 100%; height: auto; max-width: 800px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 1rem auto; display: block;" />
+      </div>
+    </section>
+
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        // Initialize carousel with lazy loading
+        $('.carousel').slick({
+          dots: true,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 1,
+          adaptiveHeight: true,
+          autoplay: true,
+          autoplaySpeed: 4000,
+          lazyLoad: 'ondemand',
+          fade: true,
+          cssEase: 'linear'
+        });
+
+        // Timeline click navigation
+        $('.timeline-clickable').click(function(e) {
+          // Prevent click if user clicked on a link
+          if (e.target.tagName === 'A') {
+            return;
+          }
+          
+          const targetId = $(this).data('target');
+          const targetSection = $('#' + targetId);
+          
+          if (targetSection.length) {
+            // Smooth scroll to target section
+            $('html, body').animate({
+              scrollTop: targetSection.offset().top - 80
+            }, 800, 'easeInOutQuart');
+            
+            // Add highlight effect to target section
+            targetSection.addClass('section-highlight');
+            setTimeout(() => {
+              targetSection.removeClass('section-highlight');
+            }, 2000);
+          }
+        });
+
+        // Convert data-lazy to src for lazy loading
+        $('.carousel img[data-lazy]').each(function() {
+          const $img = $(this);
+          const src = $img.attr('data-lazy');
+          $img.attr('src', src).removeAttr('data-lazy');
+        });
+
+        // Smooth scrolling for navigation links
+        $('a[href^="#"]').on('click', function(e) {
+          e.preventDefault();
+          const target = $(this.getAttribute('href'));
+          if (target.length) {
+            $('html, body').animate({
+              scrollTop: target.offset().top - 20
+            }, 800);
+          }
+        });
+
+        // Add loading animation for images
+        $('img').on('load', function() {
+          $(this).addClass('loaded');
+        });
+      });
+    </script>
+  </body>
+</html>
