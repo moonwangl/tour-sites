@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>阿德莱德莫纳托野生动物园一日游 | 从Ashford到莫纳托的精彩之旅</title>
+  <meta name="description" content="从Ashford出发，游览斯特灵游乐场、莫纳托野生动物园、汉道夫农家谷仓、洛夫蒂山顶夜景的完美一日游。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+  <style>
+    :root {
+      --primary-blue: #006c8c;
+      --secondary-blue: #0088b3;
+      --accent-orange: #ff6b35;
+      --accent-green: #2ecc71;
+      --accent-gold: #f39c12;
+      --light-gray: #f8f9fa;
+      --medium-gray: #6c757d;
+      --dark-gray: #343a40;
+      --white: #ffffff;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+      background: var(--light-gray);
+      color: var(--dark-gray);
+      font-weight: 400;
+    }
+
+    /* Typography Hierarchy */
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 0 0 1rem 0;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--primary-blue);
+      margin: 0 0 1.5rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin: 0 0 1rem 0;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin: 0 0 1rem 0;
+      font-weight: 300;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+      color: var(--white);
+      padding: 4rem 1rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
+      opacity: 0.3;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      margin-bottom: 1.5rem;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 2.5rem;
+      opacity: 0.95;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-primary {
+      background: var(--accent-orange);
+      color: var(--white);
+    }
+
+    .btn-secondary {
+      background: var(--white);
+      color: var(--primary-blue);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .btn-primary:hover {
+      background: #e55a2b;
+    }
+
+    .btn-secondary:hover {
+      background: #f8f9fa;
+    }
+
+    /* SVG Icons */
+    .icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      fill: currentColor;
+    }
+
+    .icon-small {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+
+    /* Main Content */
+    main {
+      padding: 0rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section {
+      background: var(--white);
+      margin: 2rem 0;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    section:hover {
+       transform: translateY(-4px);
+       box-shadow: var(--shadow-hover);
+     }
+
+    /* Timeline Styles */
+    ul.timeline {
+      list-style: none;
+      padding: 0;
+      position: relative;
+    }
+
+    ul.timeline::before {
+      content: '';
+      position: absolute;
+      left: 1rem;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, var(--accent-orange), var(--accent-green));
+      border-radius: 2px;
+    }
+
+    ul.timeline li {
+      padding: 1rem 0 1rem 3rem;
+      position: relative;
+      font-size: 1.1rem;
+    }
+
+    ul.timeline li::before {
+      content: '';
+      position: absolute;
+      left: 0.25rem;
+      top: 1.5rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      background: var(--accent-orange);
+      border-radius: 50%;
+      border: 3px solid var(--white);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    ul.timeline li strong {
+      color: var(--primary-blue);
+      font-weight: 600;
+    }
+
+    /* Clickable Timeline Items */
+    .timeline-clickable {
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 8px;
+      margin: 0.5rem 0;
+      padding: 0.75rem 1rem 0.75rem 2rem;
+      position: relative;
+    }
+
+    .timeline-clickable::after {
+      content: '→';
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--medium-gray);
+      font-size: 1.2rem;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    .timeline-clickable:hover {
+      background: rgba(0, 108, 140, 0.05);
+      transform: translateX(5px);
+      box-shadow: 0 2px 8px rgba(0, 108, 140, 0.1);
+    }
+
+    .timeline-clickable:hover strong {
+      color: var(--accent-orange);
+    }
+
+    .timeline-clickable:hover::after {
+      opacity: 1;
+      color: var(--accent-orange);
+      transform: translateY(-50%) translateX(3px);
+    }
+
+    .timeline-clickable:active {
+      transform: translateX(3px);
+    }
+
+    /* Section Highlight Effect */
+    .section-highlight {
+      animation: sectionPulse 2s ease-in-out;
+      border: 2px solid var(--accent-orange) !important;
+    }
+
+    @keyframes sectionPulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.4);
+      }
+      50% {
+        box-shadow: 0 0 0 20px rgba(255, 107, 53, 0.1);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 53, 0);
+      }
+    }
+
+    /* Highlights */
+    .highlights {
+      margin-top: 1rem;
+    }
+
+    .highlights ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .highlights li {
+      margin: 0.75rem 0;
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: flex-start;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .highlights li:before {
+      content: "✓";
+      color: #2c5530;
+      font-weight: bold;
+      margin-right: 10px;
+      font-size: 14px;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .highlights li strong {
+      color: var(--accent-orange);
+      font-weight: 600;
+    }
+
+    .sub-location {
+      margin: 15px 0;
+      padding: 15px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      border-left: 4px solid #2c5530;
+    }
+
+    .sub-location h5 {
+      color: #2c5530;
+      margin: 0 0 8px 0;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .sub-location p {
+      margin: 8px 0;
+      color: #555;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .sub-location ul {
+      margin: 10px 0 0 0;
+      padding-left: 20px;
+    }
+
+    .sub-location li {
+      margin: 5px 0;
+      padding: 0;
+      border: none;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .sub-location li:before {
+            content: "•";
+            color: #2c5530;
+            margin-right: 8px;
+            margin-top: 0;
+        }
+        
+        .whale-map {
+            margin: 15px 0;
+            text-align: center;
+        }
+        
+        .whale-map svg {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+        }
+        
+        @media (max-width: 768px) {
+            .whale-map svg {
+                max-width: 100%;
+            }
+            
+            .whale-map svg text {
+                font-size: 10px;
+            }
+        }
+
+    /* Map Links */
+    .map-link {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .map-link a {
+      color: var(--primary-blue);
+      font-weight: 600;
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid var(--primary-blue);
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .map-link a:hover {
+      background: var(--primary-blue);
+      color: var(--white);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .map-link svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    /* Carousel Improvements */
+    .carousel {
+      margin: 1rem auto;
+      max-width: 960px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .carousel img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .carousel img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Lazy Loading */
+    .carousel img[data-lazy] {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .carousel img.slick-active {
+      opacity: 1;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 3rem 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+      }
+
+      section {
+        padding: 1.5rem;
+        margin: 1rem 0;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .carousel img {
+        height: 250px;
+      }
+    }
+
+    /* Scroll to Top Button */
+    #scroll-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: var(--primary-blue);
+      color: var(--white);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+      z-index: 1000;
+      font-size: 0;
+    }
+
+    #scroll-to-top:hover {
+      background: var(--secondary-blue);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    #scroll-to-top svg {
+      width: 24px;
+      height: 24px;
+      color: var(--white);
+    }
+
+    @media (max-width: 768px) {
+      #scroll-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+      }
+
+      #scroll-to-top svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    /* Print Styles for PDF Generation */
+    @media print {
+      /* Reset and base styles */
+      * {
+        -webkit-print-color-adjust: exact !important;
+        color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      body {
+        font-size: 12pt;
+        line-height: 1.4;
+        color: #000 !important;
+        background: #fff !important;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Hide interactive elements */
+      .cta-buttons,
+      #scroll-to-top,
+      .carousel,
+      script {
+        display: none !important;
+      }
+
+      /* Hero section adjustments */
+      .hero {
+        background: #006c8c !important;
+        color: #fff !important;
+        padding: 2rem 1rem !important;
+        page-break-inside: avoid;
+        margin-bottom: 1rem;
+      }
+
+      .hero::before {
+        display: none !important;
+      }
+
+      .hero h1 {
+        font-size: 24pt !important;
+        margin-bottom: 0.5rem !important;
+        text-shadow: none !important;
+      }
+
+      .hero p {
+        font-size: 14pt !important;
+        margin-bottom: 1rem !important;
+      }
+
+      /* Main content layout */
+      main {
+        padding: 0 !important;
+        max-width: none !important;
+        margin: 0 !important;
+      }
+
+      /* Section styling */
+      section {
+        background: #fff !important;
+        margin: 1rem 0 !important;
+        padding: 1rem !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        page-break-inside: avoid;
+      }
+
+      section:hover {
+        transform: none !important;
+        box-shadow: none !important;
+      }
+
+      /* Typography adjustments */
+      h1 {
+        font-size: 20pt !important;
+        color: #000 !important;
+        margin: 0 0 0.5rem 0 !important;
+        page-break-after: avoid;
+      }
+
+      h2 {
+        font-size: 16pt !important;
+        color: #006c8c !important;
+        margin: 0 0 0.75rem 0 !important;
+        page-break-after: avoid;
+        border-bottom: 2px solid #006c8c;
+        padding-bottom: 0.25rem;
+      }
+
+      h3 {
+        font-size: 14pt !important;
+        color: #000 !important;
+        margin: 0 0 0.5rem 0 !important;
+        page-break-after: avoid;
+      }
+
+      h5 {
+        font-size: 12pt !important;
+        color: #2c5530 !important;
+        margin: 0 0 0.25rem 0 !important;
+      }
+
+      p {
+        font-size: 11pt !important;
+        margin: 0 0 0.5rem 0 !important;
+        orphans: 3;
+        widows: 3;
+      }
+
+      /* Timeline styles */
+      ul.timeline {
+        position: relative;
+        padding-left: 2rem !important;
+      }
+
+      ul.timeline::before {
+        content: '';
+        position: absolute;
+        left: 0.5rem;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #006c8c !important;
+      }
+
+      ul.timeline li {
+        padding: 0.5rem 0 0.5rem 1.5rem !important;
+        font-size: 11pt !important;
+        position: relative;
+        page-break-inside: avoid;
+      }
+
+      ul.timeline li::before {
+        content: '';
+        position: absolute;
+        left: -0.25rem;
+        top: 0.75rem;
+        width: 0.75rem;
+        height: 0.75rem;
+        background: #ff6b35 !important;
+        border-radius: 50%;
+        border: 2px solid #fff;
+      }
+
+      .timeline-clickable {
+        cursor: default !important;
+        background: none !important;
+        transform: none !important;
+        box-shadow: none !important;
+      }
+
+      .timeline-clickable::after {
+        display: none !important;
+      }
+
+      .timeline-clickable:hover {
+        background: none !important;
+        transform: none !important;
+        box-shadow: none !important;
+      }
+
+      /* Highlights and lists */
+      .highlights ul {
+        padding-left: 1rem !important;
+      }
+
+      .highlights li {
+        margin: 0.25rem 0 !important;
+        padding: 0.25rem 0 !important;
+        border-bottom: 1px solid #eee !important;
+        font-size: 10pt !important;
+        page-break-inside: avoid;
+      }
+
+      .highlights li:before {
+        content: "✓" !important;
+        color: #2c5530 !important;
+        margin-right: 0.5rem !important;
+        font-size: 10pt !important;
+      }
+
+      .highlights li strong {
+        color: #ff6b35 !important;
+        font-weight: 600 !important;
+      }
+
+      /* Sub-location styling */
+      .sub-location {
+        margin: 0.75rem 0 !important;
+        padding: 0.75rem !important;
+        background: #f8f9fa !important;
+        border-radius: 4px !important;
+        border-left: 3px solid #2c5530 !important;
+        page-break-inside: avoid;
+      }
+
+      .sub-location h5 {
+        color: #2c5530 !important;
+      }
+
+      .sub-location p {
+        font-size: 10pt !important;
+        color: #555 !important;
+      }
+
+      .sub-location li {
+        font-size: 10pt !important;
+        color: #666 !important;
+        margin: 0.25rem 0 !important;
+      }
+
+      /* Map links */
+      .map-link {
+        text-align: center;
+        margin: 0.75rem 0 !important;
+        page-break-inside: avoid;
+      }
+
+      .map-link a {
+        color: #006c8c !important;
+        text-decoration: underline !important;
+        border: 1px solid #006c8c !important;
+        padding: 0.5rem 1rem !important;
+        border-radius: 4px !important;
+        display: inline-block !important;
+        font-size: 10pt !important;
+      }
+
+      .map-link a:hover {
+        background: none !important;
+        transform: none !important;
+        box-shadow: none !important;
+      }
+
+      /* Icons in print */
+      .icon,
+      .icon-small {
+        display: none !important;
+      }
+
+      /* Images */
+       img {
+         max-width: 100% !important;
+         height: auto !important;
+         page-break-inside: avoid;
+         border: 1px solid #ddd !important;
+         border-radius: 4px !important;
+       }
+
+       /* Trip overview map specific styling */
+       .trip-overview-map {
+         margin: 1rem 0 !important;
+         text-align: center !important;
+         page-break-inside: avoid;
+       }
+
+       .trip-overview-map h3 {
+         font-size: 14pt !important;
+         color: #006c8c !important;
+         margin: 0 0 0.75rem 0 !important;
+         text-align: center !important;
+       }
+
+       .trip-overview-map img {
+         width: auto !important;
+         height: 400px !important;
+         margin: 0.5rem auto !important;
+         display: block !important;
+         border: 2px solid #006c8c !important;
+         border-radius: 8px !important;
+         box-shadow: none !important;
+       }
+
+      /* Page breaks */
+      .hero {
+        page-break-after: auto;
+      }
+
+      section {
+        page-break-before: auto;
+        page-break-after: auto;
+      }
+
+      h2 {
+        page-break-before: auto;
+      }
+
+      /* Ensure proper spacing */
+      @page {
+        margin: 1in;
+        size: A4;
+      }
+
+      /* Remove hover effects and transitions */
+      * {
+        transition: none !important;
+        animation: none !important;
+      }
+
+      /* URL display for links */
+      a[href^="http"]:after {
+        content: " (" attr(href) ")";
+        font-size: 9pt;
+        color: #666;
+      }
+
+      /* Ensure text is selectable and readable */
+      body {
+        -webkit-user-select: text !important;
+        -moz-user-select: text !important;
+        -ms-user-select: text !important;
+        user-select: text !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>阿德莱德莫纳托野生动物园一日游</h1>
+      <p>从Ashford出发，体验斯特灵游乐场、莫纳托野生动物园狮子互动、汉道夫德式风情、洛夫蒂山顶夜景</p>
+      <div class="cta-buttons">
+        <a href="#itinerary" class="btn btn-primary">
+          <svg class="icon-small" viewBox="0 0 24 24">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+          查看行程详情
+        </a>
+      </div>
+    </div>
+  </section>
+  <main>
+      <div class="carousel">
+        <div><img data-lazy="assets/image2.png" alt="汉道夫德式小镇" loading="lazy"></div>
+        <div><img data-lazy="assets/image3.png" alt="洛夫蒂山顶观景体验" loading="lazy"></div>
+        <div><img data-lazy="assets/image5.png" alt="斯特灵游乐场风光" loading="lazy"></div>
+        <div><img data-lazy="assets/image7.png" alt="斯特灵游乐场风光" loading="lazy"></div>
+      </div>
+
+    <section id="itinerary">
+        <h2>
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+          行程路线
+        </h2>
+      <ul class="timeline">
+        <li>8:15 从Ashford出发</li>
+        <li class="timeline-clickable" data-target="steamroller-park">8:30 到达 <strong>斯特灵 Steamroller Park</strong>（游乐场、早餐）</li>
+        <li>9:30 离开斯特灵</li>
+        <li class="timeline-clickable" data-target="monarto-safari">10:00 到达 <strong>莫纳托野生动物园</strong>（狮子互动、观赏动物、午餐）</li>
+        <li>14:00 离开莫纳托野生动物园</li>
+        <li class="timeline-clickable" data-target="hahndorf-farm">14:30 到达 <strong>汉道夫 Farm Barn</strong>（农家谷仓体验）</li>
+        <li class="timeline-clickable" data-target="hahndorf-inn">17:15 <strong>汉道夫旅店</strong>晚餐</li>
+        <li>18:15 离开汉道夫</li>
+        <li class="timeline-clickable" data-target="mount-lofty">18:30 到达 <strong>洛夫蒂山顶</strong>（观赏夜景）</li>
+        <li>19:30 返回家中</li>
+      </ul>
+      <div class="map-link">
+          <a href="https://maps.app.goo.gl/u8ymboDmycTR1AmX9" target="_blank">
+            <svg class="icon-small" viewBox="0 0 24 24">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            查看完整路线地图
+          </a>
+        </div>
+        
+        <div class="trip-overview-map">
+          <h3>莫纳托野生动物园一日游路线图</h3>
+          <img src="assets/map.png" alt="莫纳托野生动物园一日游路线图 - 详细展示从阿什福德到各个景点的最佳路线" style="width: 100%; height: auto; max-width: 800px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 1rem auto; display: block; border: 1px solid #ddd;" />
+        </div>
+    </section>
+
+    <section id="steamroller-park">
+        <h2>
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+          </svg>
+          斯特灵 Steamroller Park 亮点
+        </h2>
+      <p>位于斯特灵的家庭友好型公园，设有现代化游乐设施和舒适的早餐环境，是开始一天行程的理想地点。</p>
+      <div class="map-link">
+        <a href="https://maps.app.goo.gl/r6safcHr9aHLjW4h7" target="_blank">
+          <svg class="icon-small" viewBox="0 0 24 24">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+          查看斯特灵地图
+        </a>
+      </div>
+      <ul class="highlights">
+        <li><strong>现代化游乐场：</strong>设有适合各年龄段儿童的游乐设施，包括攀爬架、滑梯和秋千等，让孩子们在旅程开始前尽情玩耍。</li>
+        <li><strong>早餐设施：</strong>公园附近有多家咖啡厅和早餐店，提供新鲜美味的早餐选择，为一天的行程补充能量。</li>
+        <li><strong>宽敞草坪：</strong>开阔的绿地空间，适合家庭野餐和休闲活动，让大人和孩子都能享受户外时光。</li>
+        <li><strong>便利设施：</strong>配备完善的停车场、洗手间和座椅区域，为游客提供舒适便利的体验。</li>
+      </ul>
+      
+      <div class="sub-location">
+        <img src="assets/image5.png" alt="斯特灵游乐场" style="width: 100%; height: auto; max-width: 800px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 1rem auto; display: block;" />
+      </div>
+    </section>
+
+    <section id="monarto-safari">
+        <h2>
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M6 3l0 6c0 2.97 2.16 5.43 5 5.91V19H9v2h6v-2h-2v-4.09c2.84-.48 5-2.94 5-5.91l0-6H6zm2 2h8v4c0 2.21-1.79 4-4 4s-4-1.79-4-4V5z"/>
+          </svg>
+          莫纳托野生动物园亮点
+        </h2>
+      <p>澳大利亚最大的开放式野生动物园，位于阿德莱德以东70公里，提供与野生动物近距离接触的独特体验。</p>
+      <div class="map-link">
+        <a href="https://maps.app.goo.gl/DQ7MnUP7tMnhxe8H6" target="_blank">
+          <svg class="icon-small" viewBox="0 0 24 24">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+          查看莫纳托野生动物园地图
+        </a>
+      </div>
+      <ul class="highlights">
+        <li><strong>狮子互动体验（10:30）：</strong>参加专业导游带领的狮子近距离观察活动，了解狮子的生活习性和保护知识，这是园区最受欢迎的体验项目之一。</li>
+        <li><strong>非洲草原区：</strong>观赏长颈鹿、斑马、犀牛、河马等非洲野生动物，体验开放式的野生动物园环境，动物们在广阔的草原上自由生活。</li>
+        <li><strong>澳洲本土动物区：</strong>近距离接触袋鼠、考拉、袋熊、塔斯马尼亚恶魔等澳大利亚特有动物，了解本土生态系统。</li>
+        <li><strong>园区午餐（12:30）：</strong>在园区餐厅享用午餐，同时欣赏周围的自然风光和野生动物。</li>
+        <li><strong>教育中心：</strong>参观野生动物保护教育中心，了解动物保护工作和可持续发展理念。</li>
+      </ul>
+      
+      <div class="sub-location">
+        <img src="assets/image6.png" alt="莫纳托野生动物园" style="width: 100%; height: auto; max-width: 800px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 1rem auto; display: block;" />
+      </div>
+    </section>
+
+
+
+    <section id="hahndorf-farm">
+        <h2>
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M4.5 12.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5S6.83 11 6 11s-1.5.67-1.5 1.5zM9 16c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5S9 15.17 9 16zm3-9c-4.97 0-9 4.03-9 9 0 .83.67 1.5 1.5 1.5S6 16.83 6 16c0-3.31 2.69-6 6-6s6 2.69 6 6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5c0-4.97-4.03-9-9-9z"/>
+          </svg>
+          汉道夫农家谷仓体验
+        </h2>
+      <p>位于阿德莱德山区的德式小镇汉道夫，体验传统农家生活和德国文化的完美融合。</p>
+      <div class="map-link">
+        <a href="https://maps.app.goo.gl/aTXYFEMiMJ2NH7Jy6" target="_blank">
+          <svg class="icon-small" viewBox="0 0 24 24">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+          查看汉道夫农场地图
+        </a>
+      </div>
+      <ul class="highlights">
+        <li><strong>农家谷仓参观：</strong>探索传统的德式农家建筑，了解早期德国移民的农业生活方式和历史文化。</li>
+        <li><strong>动物互动：</strong>与农场动物近距离接触，包括羊驼、山羊、绵羊等温顺的农场动物，适合全家人体验。</li>
+        <li><strong>手工艺品展示：</strong>观赏传统德国手工艺品制作过程，包括木雕、陶艺和纺织品等。</li>
+        <li><strong>农场产品品尝：</strong>品尝新鲜的农场产品，包括有机蔬菜、自制奶酪和传统德式面包。</li>
+        <li><strong>德式花园：</strong>漫步在精心设计的德式花园中，欣赏四季花卉和传统园艺设计。</li>
+      </ul>
+      
+      <div class="sub-location">
+        <img src="assets/image7.png" alt="汉道夫农场" style="width: 100%; height: auto; max-width: 800px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 1rem auto; display: block;" />
+      </div>
+    </section>
+
+    <section id="hahndorf-inn">
+        <h2>
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97L6.5 13v9h3v-9l-.25-.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2v2h2v-2h2v-2h-2V6h-2zm0-4h6v2h-6V2z"/>
+          </svg>
+          汉道夫旅店晚餐
+        </h2>
+      <p>在历史悠久的汉道夫旅店享用正宗的德式晚餐，体验传统德国美食文化。</p>
+      <div class="map-link">
+        <a href="https://maps.app.goo.gl/WCfF86CihkWMrrKG7" target="_blank">
+          <svg class="icon-small" viewBox="0 0 24 24">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+          查看汉道夫旅店地图
+        </a>
+      </div>
+      <ul class="highlights">
+        <li><strong>德式传统菜肴：</strong>品尝正宗的德国香肠、酸菜、猪肘等经典德式料理，感受地道的德国风味。</li>
+        <li><strong>精酿啤酒：</strong>享用当地酿造的德式啤酒，包括小麦啤酒、黑啤等多种选择。</li>
+        <li><strong>历史建筑氛围：</strong>在保持19世纪德式建筑风格的餐厅中用餐，感受浓厚的历史文化氛围。</li>
+        <li><strong>现场音乐：</strong>欣赏传统德国民谣和现场音乐表演，增添用餐的愉悦体验。</li>
+        <li><strong>德式甜点：</strong>品尝传统的德式甜点，如黑森林蛋糕、苹果卷等经典甜品。</li>
+      </ul>
+      
+      <div class="sub-location">
+        <img src="assets/image2.png" alt="汉道夫旅店" style="width: 100%; height: auto; max-width: 800px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 1rem auto; display: block;" />
+      </div>
+    </section>
+
+    <section id="mount-lofty">
+        <h2>
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M14,6L10.25,11L13.1,14.8L11.5,16C9.81,13.75 7,10 7,10L1,18H23L14,6Z"/>
+          </svg>
+          洛夫蒂山顶夜景
+        </h2>
+      <p>阿德莱德最高观景点，海拔727米，是观赏阿德莱德市区和海岸线夜景的最佳地点。</p>
+      <div class="map-link">
+        <a href="https://maps.app.goo.gl/Cyq7J3MBMMXNNwtv5" target="_blank">
+          <svg class="icon-small" viewBox="0 0 24 24">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+          查看洛夫蒂山顶地图
+        </a>
+      </div>
+      <ul class="highlights">
+        <li><strong>360度全景观景：</strong>从山顶观景台可以360度俯瞰阿德莱德市区、圣文森特湾和阿德莱德山区的壮丽景色。</li>
+        <li><strong>夜景摄影：</strong>黄昏时分是拍摄阿德莱德夜景的最佳时机，城市灯火与海岸线形成美丽的光影效果。</li>
+        <li><strong>观景台设施：</strong>设有现代化的观景台和休息区，提供舒适的观景体验。</li>
+        <li><strong>山顶咖啡厅：</strong>在山顶咖啡厅享用热饮，同时欣赏夜景，为一天的行程画下完美句号。</li>
+        <li><strong>星空观测：</strong>远离城市光污染，是观赏南半球星空的理想地点。</li>
+      </ul>
+      
+      <div class="sub-location">
+        <img src="assets/image3.png" alt="洛夫蒂山顶夜景" style="width: 100%; height: auto; max-width: 800px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 1rem auto; display: block;" />
+      </div>
+    </section>
+
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        // Initialize carousel with lazy loading
+        $('.carousel').slick({
+          dots: true,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 1,
+          adaptiveHeight: true,
+          autoplay: true,
+          autoplaySpeed: 4000,
+          lazyLoad: 'ondemand',
+          fade: true,
+          cssEase: 'linear'
+        });
+
+        // Timeline click navigation
+        $('.timeline-clickable').click(function(e) {
+          // Prevent click if user clicked on a link
+          if (e.target.tagName === 'A') {
+            return;
+          }
+          
+          const targetId = $(this).data('target');
+          const targetSection = $('#' + targetId);
+          
+          if (targetSection.length) {
+            // Smooth scroll to target section
+            $('html, body').animate({
+              scrollTop: targetSection.offset().top - 80
+            }, 800, 'easeInOutQuart');
+            
+            // Add highlight effect to target section
+            targetSection.addClass('section-highlight');
+            setTimeout(() => {
+              targetSection.removeClass('section-highlight');
+            }, 2000);
+          }
+        });
+
+        // Convert data-lazy to src for lazy loading
+        $('.carousel img[data-lazy]').each(function() {
+          const $img = $(this);
+          const src = $img.attr('data-lazy');
+          $img.attr('src', src).removeAttr('data-lazy');
+        });
+
+        // Smooth scrolling for navigation links
+        $('a[href^="#"]').on('click', function(e) {
+          e.preventDefault();
+          const target = $(this.getAttribute('href'));
+          if (target.length) {
+            $('html, body').animate({
+              scrollTop: target.offset().top - 20
+            }, 800);
+          }
+        });
+
+        // Add loading animation for images
+        $('img').on('load', function() {
+          $(this).addClass('loaded');
+        });
+
+        // Scroll to top functionality
+        $(window).scroll(function() {
+          if ($(this).scrollTop() > 300) {
+            $('#scroll-to-top').fadeIn();
+          } else {
+            $('#scroll-to-top').fadeOut();
+          }
+        });
+
+        $('#scroll-to-top').click(function() {
+          $('html, body').animate({
+            scrollTop: 0
+          }, 800, 'easeInOutQuart');
+          return false;
+        });
+      });
+    </script>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" title="回到顶部">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 14L12 9L17 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </body>
+</html>
